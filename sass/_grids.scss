@@ -3,7 +3,8 @@
 
 @import "susy";
 
-$susy: (
-  columns: 12,
-  gutters: 1/4,
-);
+// $susy: (
+//   columns: 12,
+//   gutters: 1/4,
+// );
+$susy: layout(12 1 fluid float outside);

@@ -68,7 +68,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin: 50px auto;
+  margin: 0 auto;
+  border: 1px solid red;
 }
 /* line 12, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
 .wrapper:after {
@@ -77,8 +78,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   clear: both;
 }
 
-/* line 2, ../sass/modules/_topbar.sass */
+/* line 1, ../sass/modules/_topbar.sass */
 .topbar {
   display: block;
-  background-color: black;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+/* line 6, ../sass/modules/_topbar.sass */
+.logo {
+  width: 13.04348%;
+  float: left;
+  margin-right: 4.34783%;
+  background-color: green;
+}
+
+/* line 10, ../sass/modules/_topbar.sass */
+.navtest {
+  width: 21.73913%;
+  float: left;
+  margin-right: 4.34783%;
+  background-color: yellow;
 }
