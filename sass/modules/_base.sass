@@ -1,7 +1,29 @@
-h1, h2 { line-height: 1.1; }
-h3, h4 { line-height: 1.3; }
-h1 { font-size: 400%; letter-spacing: -2px; }
-h2 { font-size: 250%; letter-spacing: -1px; }
-h3 { font-size: 200%; }
-h4 { font-size: 180%; }
-h5 { font-size: 130%; }
+// Modular Scale Settings
+$ms-base: 16px
+$ms-ratio: $golden
+
+body
+	font-family: "PT Sans", sans-serif
+	font-size: ms()
+
+h1, h2, h3, p
+	text-rendering: optimizeLegibility
+// h1, h2
+// 	line-height: 1.1
+
+// h3, h4
+// 	line-height: 1.3
+
+h1
+	font-size: ms(4)
+	font-family: "Roboto Condensed"
+// 	letter-spacing: -2px
+// h2
+// 	font-size: 250%
+// 	letter-spacing: -1px
+// h3
+// 	font-size: 200%
+// h4
+// 	font-size: 180%
+// h5
+// 	font-size: 130%

@@ -63,6 +63,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 5, ../sass/modules/_base.sass */
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+}
+
+/* line 9, ../sass/modules/_base.sass */
+h1, h2, h3, p {
+  text-rendering: optimizeLegibility;
+}
+
+/* line 17, ../sass/modules/_base.sass */
+h1 {
+  font-size: 110px;
+  font-family: "Roboto Condensed";
+}
+
 /* line 1, ../sass/modules/_layout.sass */
 .wrapper {
   max-width: 1200px;
@@ -83,9 +100,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
   background-color: #f0f0f0;
   margin: 0;
+  height: 40px;
 }
 
-/* line 6, ../sass/modules/_topbar.sass */
+/* line 7, ../sass/modules/_topbar.sass */
 .logo {
   width: 13.04348%;
   float: left;
@@ -93,10 +111,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background-color: green;
 }
 
-/* line 10, ../sass/modules/_topbar.sass */
-.navtest {
-  width: 21.73913%;
-  float: left;
-  margin-right: 4.34783%;
+/* line 11, ../sass/modules/_topbar.sass */
+.topnav {
+  width: 30.43478%;
+  float: right;
+  margin-right: 0;
   background-color: yellow;
+}
+
+/* line 15, ../sass/modules/_topbar.sass */
+.nav-item {
+  display: inline-block;
 }
