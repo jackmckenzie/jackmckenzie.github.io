@@ -2,4 +2,9 @@
 	@include container(1200px)
 	// background-color: $color-background
 	margin: 0 auto
+	padding-left: 15px
+	padding-right: 15px
 	border: 1px solid red
+
+	@include breakpoint((max-width: 40em))
+		border: 1px solid blue

@@ -5,13 +5,27 @@
 	height: 40px
 
 .logo
-	@include span(first 2)
+	@include span(first 4)
 	background-color: green
 
 .topnav
 	@include span(last 4)
 	background-color: yellow
+	@include breakpoint((max-width: 50em))
+		@include span(last 8)
 
 .nav-item
-	display: inline-block
-	// @include span (2)
+	display: block
+	background-color: #669FB3
+	// @include span (1.5)
+.nav-item:nth-child(1)
+	@include span(2 at 1 of 8)
+
+.nav-item:nth-child(2)
+	@include span(2 at 3 of 8)
+
+.nav-item:nth-child(3)
+	@include span(2 at 5 of 8)
+
+.nav-item:nth-child(4)
+	@include span(2 at 7 of 8)
