@@ -1,31 +1,81 @@
 .topbar
 	display: block
-	background-color: #f0f0f0
+	background-color: #e9eeed
 	margin: 0
-	height: 40px
+	padding: 0
+	// padding-top: 10px
+	// padding-bottom: 10px
+	// height: 40px
 
 .logo
-	@include span(first 4)
-	background-color: green
+	@include span(4)
+	position: relative
+	// background-color: green
+	margin-top: 5px
+	padding: 0
+	height: 100%
+	vertical-align: bottom
+	// vertical-align: center
+	// font-size: ms(1)
+	@include breakpoint((max-width: 60em))
+		@include span(5)
+	h3
+		font-size: ms(2)
+		color: #23bba4
+		@include breakpoint((max-width: 60em))
+			font-size: ms(1)
+			margin-top: 3px
 
 .topnav
-	@include span(last 4)
-	background-color: yellow
-	@include breakpoint((max-width: 50em))
-		@include span(last 8)
+	// @include clearfix
+	@include span(last 3)
+	// background-color: yellow
+	@include breakpoint((max-width: 60em))
+		@include span(last 7)
 
 .nav-item
-	display: block
-	background-color: #669FB3
+	display: inline-block
+	@include span(1 of 3)
+	
+	// background-color: #669FB3
+	text-align: left
+	// outline: 1px solid white
+	margin-top: 5px
 	// @include span (1.5)
-.nav-item:nth-child(1)
-	@include span(2 at 1 of 8)
+	&:last-child
+		@include span(1 of 3 last)
+	a
+		display: block
+		text-decoration: none
+		padding: 10px 0
+		// margin-left: 10%
+		// margin-right: 10%
+		color: #696d6c
 
-.nav-item:nth-child(2)
-	@include span(2 at 3 of 8)
+		&:hover
+			color: #23bba4
 
-.nav-item:nth-child(3)
-	@include span(2 at 5 of 8)
+// .nav-item:nth-child(1)
+// 	@include span(1 of $nav_susy)
+// 	// padding-right: 30px
+// // 
+// .nav-item:nth-child(2)
+// 	@include span(1 of $nav_susy)
+// 	// padding-right: 30px
+// // 
+// .nav-item:nth-child(3)
+// 	@include span(last 1 of $nav_susy)
+// 	// padding-right: 30px
+// 
 
-.nav-item:nth-child(4)
-	@include span(2 at 7 of 8)
+// .nav-item:nth-child(1)
+	// @include span(2 at 1 of 8)
+
+// .nav-item:nth-child(2)
+	// @include span(2 at 3 of 8)
+
+// .nav-item:nth-child(3)
+	// @include span(2 at 5 of 8)
+
+// .nav-item:nth-child(4)
+	// @include span(2 at 7 of 8)
