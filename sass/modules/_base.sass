@@ -4,12 +4,11 @@
 	box-sizing: border-box
 
 // Modular Scale Settings
-$ms-base: 16px
+$ms-base: 18px
 $ms-ratio: $golden
 
 body
 	font-family: "PT Sans", sans-serif
-	font-size: ms()
 	background-color: #e9eeed
 
 h1, h2, h3, p
@@ -19,17 +18,88 @@ h1, h2, h3, p
 
 // h3, h4
 // 	line-height: 1.3
-
+p
+	font-size: ms()
+	line-height: ms(1)
 h1
+
 	font-size: ms(4)
 	font-family: "Roboto Condensed"
+	line-height: ms(4) * $golden
 // 	letter-spacing: -2px
-// h2
-// 	font-size: 250%
-// 	letter-spacing: -1px
-// h3
-// 	font-size: 200%
-// h4
-// 	font-size: 180%
-// h5
-// 	font-size: 130%
+h2
+	font-size: ms(2.5)
+	line-height: ms(2.5) * $golden
+	// margin-top: ms(1.25)
+	// margin-bottom: ms(1.25)
+	// letter-spacing: -1px
+h3
+	font-size: ms(2)
+	line-height: ms(2) * $golden
+h4
+	font-size: ms(1.5)
+	line-height: ms(1.5) * $golden
+h5
+	font-size: ms(1.2)
+	line-height: ms(1.2) * $golden
+
+.ms1
+	// height: ms(1)
+	font-size: ms()
+	background-color: #23bba4
+	line-height: ms() * 1.2
+.ms2
+	// height: ms(2)
+	font-size: ms(2)
+	background-color: #23bba4
+	line-height: ms(2) * 1.2
+.ms3
+	// height: ms(3)
+	font-size: ms(3)
+	background-color: #23bba4
+	line-height: ms(3) * 1.2
+.ms4
+	// height: ms(4)
+	font-size: ms(4)
+	background-color: #23bba4
+	line-height: ms(4) * 1.2
+.ms5
+	// height: ms(5)
+	font-size: ms(5)
+	background-color: #23bba4
+	line-height: ms(5) * 1.2
+.ms6
+	// height: ms(6)
+	font-size: ms(6)
+	background-color: #23bba4
+	line-height: ms(6) * 1.2
+.ms7
+	// height: ms(7)
+	font-size: ms(7)
+	background-color: #23bba4
+	line-height: ms(7) * 1.2
+.ms8
+	// height: ms(8)
+	font-size: ms(8)
+	background-color: #23bba4
+	line-height: ms(8) * 1.2
+.ms9
+	// height: ms(9)
+	font-size: ms(9)
+	background-color: #23bba4
+	line-height: ms(9) * 1.2
+.ms10
+	// height: ms(10)
+	font-size: ms(10)
+	background-color: #23bba4
+	line-height: ms(10) * 1.2
+.ms11
+	// height: ms(11)
+	font-size: ms(11)
+	background-color: #23bba4
+	line-height: ms(11) * 1.2
+.ms12
+	// height: ms(12)
+	font-size: ms(12)
+	background-color: #23bba4
+	line-height: ms(12) * 1.2
