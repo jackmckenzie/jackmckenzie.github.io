@@ -3,9 +3,12 @@
 	// background-color: #e9eeed
 	margin: 0
 	padding: 0
+
 	// padding-top: 10px
 	// padding-bottom: 10px
 	// height: 40px
+	> div
+		border-bottom: 1px solid #696d6c
 
 .logo
 	@include span(4)
@@ -20,7 +23,7 @@
 	@include breakpoint((max-width: 60em))
 		@include span(5)
 	h3
-		font-size: ms(2)
+		// font-size: ms(2)
 		color: #23bba4
 		@include breakpoint((max-width: 60em))
 			font-size: ms(1)
@@ -28,6 +31,7 @@
 
 .topnav
 	// @include clearfix
+	margin-top: 36px
 	@include span(last 3)
 	// background-color: yellow
 	@include breakpoint((max-width: 60em))
@@ -42,8 +46,8 @@
 	
 	// background-color: #669FB3
 	text-align: left
-	// outline: 1px solid white
-	margin-top: 5px
+	outline: 1px solid white
+	// margin-top: 5px
 	// @include span (1.5)
 	&:last-child
 		@include span(1 of 3 last)
