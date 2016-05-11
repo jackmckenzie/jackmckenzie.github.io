@@ -74,14 +74,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
+  background-color: #e9eeed;
 }
 
-/* line 14, ../sass/modules/_base.sass */
+/* line 15, ../sass/modules/_base.sass */
 h1, h2, h3, p {
   text-rendering: optimizeLegibility;
 }
 
-/* line 22, ../sass/modules/_base.sass */
+/* line 23, ../sass/modules/_base.sass */
 h1 {
   font-size: 110px;
   font-family: "Roboto Condensed";
@@ -92,16 +93,6 @@ h1 {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY2NTU2NiIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI2Ni42NjY2NyUiIHN0b3AtY29sb3I9IiM4Zjc5OGYiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNjYuNjY2NjclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA=='), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(102, 85, 102, 0.25)), color-stop(66.66667%, rgba(143, 121, 143, 0.25)), color-stop(66.66667%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 50% 0%, 50% 1, color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(left, rgba(102, 85, 102, 0.25), rgba(143, 121, 143, 0.25) 66.66667%, rgba(0, 0, 0, 0) 66.66667%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
-  background-image: -webkit-linear-gradient(left, rgba(102, 85, 102, 0.25), rgba(143, 121, 143, 0.25) 66.66667%, rgba(0, 0, 0, 0) 66.66667%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
-  background-image: linear-gradient(to right, rgba(102, 85, 102, 0.25), rgba(143, 121, 143, 0.25) 66.66667%, rgba(0, 0, 0, 0) 66.66667%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0) 1px);
-  background-size: 8.57143%, 100% 24px;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top;
   margin: 0 auto;
 }
 /* line 12, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/susy-2.2.12/sass/susy/output/support/_clearfix.scss */
@@ -119,10 +110,15 @@ h1 {
 
 /* line 1, ../sass/modules/_main.sass */
 .main {
-  background-color: #ecf;
   padding: 6em 0;
 }
-/* line 5, ../sass/modules/_main.sass */
+@media (max-width: 60em) {
+  /* line 1, ../sass/modules/_main.sass */
+  .main {
+    padding: 3em 0;
+  }
+}
+/* line 7, ../sass/modules/_main.sass */
 .main h1 {
   text-align: center;
 }
@@ -130,7 +126,6 @@ h1 {
 /* line 1, ../sass/modules/_topbar.sass */
 .topbar {
   display: block;
-  background-color: #e9eeed;
   margin: 0;
   padding: 0;
 }
@@ -176,7 +171,7 @@ h1 {
 @media (max-width: 60em) {
   /* line 29, ../sass/modules/_topbar.sass */
   .topnav {
-    width: 57.14286%;
+    width: 48.57143%;
     float: right;
     margin-right: 0;
   }
@@ -191,20 +186,36 @@ h1 {
   text-align: left;
   margin-top: 5px;
 }
-/* line 45, ../sass/modules/_topbar.sass */
+@media (max-width: 60em) {
+  /* line 36, ../sass/modules/_topbar.sass */
+  .nav-item {
+    width: 29.41176%;
+    float: left;
+    margin-right: 5.88235%;
+  }
+}
+/* line 48, ../sass/modules/_topbar.sass */
 .nav-item:last-child {
   width: 25%;
   float: right;
   margin-right: 0;
 }
-/* line 47, ../sass/modules/_topbar.sass */
+@media (max-width: 60em) {
+  /* line 48, ../sass/modules/_topbar.sass */
+  .nav-item:last-child {
+    width: 29.41176%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 52, ../sass/modules/_topbar.sass */
 .nav-item a {
   display: block;
   text-decoration: none;
   padding: 10px 0;
   color: #696d6c;
 }
-/* line 55, ../sass/modules/_topbar.sass */
+/* line 60, ../sass/modules/_topbar.sass */
 .nav-item a:hover {
   color: #23bba4;
 }

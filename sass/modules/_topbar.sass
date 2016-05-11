@@ -1,6 +1,6 @@
 .topbar
 	display: block
-	background-color: #e9eeed
+	// background-color: #e9eeed
 	margin: 0
 	padding: 0
 	// padding-top: 10px
@@ -31,11 +31,14 @@
 	@include span(last 3)
 	// background-color: yellow
 	@include breakpoint((max-width: 60em))
-		@include span(last 7)
+		@include span(last 6)
 
 .nav-item
+
 	display: inline-block
 	@include span(1 of 3)
+	@include breakpoint((max-width: 60em))
+		@include span(2 of 6)
 	
 	// background-color: #669FB3
 	text-align: left
@@ -44,6 +47,8 @@
 	// @include span (1.5)
 	&:last-child
 		@include span(1 of 3 last)
+		@include breakpoint((max-width: 60em))
+			@include span(2 of 6 last)
 	a
 		display: block
 		text-decoration: none

@@ -39,16 +39,16 @@ $susy: (
   // content-box | border-box (Include padding in element width)
   global-box-sizing: border-box,
   // Used for debugging
-  debug: (
-    // show or hide grid images
-    image: show,
-    // Color of generated grid image
-    color: rgba(#656, .25),
-    // Show debug image as a background or overlay
-    output: background,
-    // Position of toggle to show and hide overlay option
-    toggle: top right,
-  ),
+  // debug: (
+  //   // show or hide grid images
+  //   image: show,
+  //   // Color of generated grid image
+  //   color: rgba(#656, .25),
+  //   // Show debug image as a background or overlay
+  //   output: background,
+  //   // Position of toggle to show and hide overlay option
+  //   toggle: top right,
+  // ),
   use-custom: (
     // false: Output background image to CSS
     // true: Use provided background image for debugging
