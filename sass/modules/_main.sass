@@ -1,8 +1,34 @@
 .main
 	// background-color: #ecf
-	padding: ms(2) 0
+	padding: 0 0 ms(2) 0
 	// @include breakpoint((max-width: 60em))
 	// 	padding: 3em 0
 
 	h1
 		text-align: center
+		// color: $jackyellow - DARK
+		color: $jackred
+.feature-list
+	padding: ms(2) 0
+	background-color: $jackaqua
+
+.item
+	@include span(3)
+	@include breakpoint((max-width:60em))
+		@include span(12)
+		margin-bottom: ms(1)
+	// outline: 1px solid red
+	background-color: $jackgreen
+
+	padding: 16px
+
+	h4
+		display: block
+		text-align: center
+		background-color: $jackyellow
+
+
+	&:last-child
+		@include span(last 3)
+		// @include breakpoint((max-width:60em))
+			// @include span(12)
