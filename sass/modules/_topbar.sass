@@ -11,8 +11,9 @@
 		border-bottom: 1px solid $jackmid
 
 .logo
-	@include span(4)
+	@include span(6)
 	position: relative
+	outline: 1px solid $jackred
 	// background-color: green
 	margin-top: 5px
 	padding: 0
@@ -20,14 +21,14 @@
 	vertical-align: bottom
 	// vertical-align: center
 	// font-size: ms(1)
-	@include breakpoint((max-width: 60em))
-		@include span(5)
+	@include breakpoint((max-width: 42em))
+		margin-top: 32px
 	h3
 		// font-size: ms(2)
 		line-height: 1
 		margin-top: 14px
 		color: $jackaqua
-		@include breakpoint((max-width: 60em))
+		@include breakpoint((max-width: 42em))
 			font-size: ms(1)
 			margin-top: 3px
 
