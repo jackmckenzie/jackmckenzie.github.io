@@ -6,3 +6,20 @@
 
 	h1
 		text-align: center
+		color: $jackyellow
+.feature-list
+	padding: ms(2) 0
+	background-color: $jackmid
+
+	h4
+		text-align: center
+
+.item
+	@include span(3)
+	// outline: 1px solid red
+	background-color: $jackpurple
+
+	padding: 16px
+
+	&:last-child
+		@include span(last 3)

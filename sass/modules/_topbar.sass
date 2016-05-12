@@ -8,7 +8,7 @@
 	// padding-bottom: 10px
 	// height: 40px
 	> div
-		border-bottom: 1px solid #696d6c
+		border-bottom: 1px solid $jackmid
 
 .logo
 	@include span(4)
@@ -24,7 +24,9 @@
 		@include span(5)
 	h3
 		// font-size: ms(2)
-		color: #23bba4
+		line-height: 1
+		margin-top: 14px
+		color: $jackaqua
 		@include breakpoint((max-width: 60em))
 			font-size: ms(1)
 			margin-top: 3px
@@ -46,7 +48,7 @@
 	
 	// background-color: #669FB3
 	text-align: left
-	outline: 1px solid white
+	// outline: 1px solid white
 	// margin-top: 5px
 	// @include span (1.5)
 	&:last-child
@@ -59,10 +61,11 @@
 		padding: 10px 0
 		// margin-left: 10%
 		// margin-right: 10%
-		color: #696d6c
+		color: $jackaqua
+		@include transition(all .2s ease)
 
 		&:hover
-			color: #23bba4
+			color: $jackorange
 
 // .nav-item:nth-child(1)
 // 	@include span(1 of $nav_susy)
