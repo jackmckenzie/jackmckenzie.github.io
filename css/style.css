@@ -224,7 +224,7 @@ h5 {
 }
 /* line 7, ../sass/modules/_main.sass */
 .main h1 {
-  font-size: 76px;
+  font-size: 60px;
   line-height: 1.2;
   text-align: center;
   color: #f2635f;
@@ -357,7 +357,7 @@ h5 {
   }
   /* line 28, ../sass/modules/_topbar.sass */
   .logo h3 {
-    font-size: 47px;
+    font-size: 37px;
     text-align: center;
   }
 }
