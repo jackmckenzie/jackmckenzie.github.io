@@ -13,14 +13,16 @@
 	background-color: $jackaqua
 
 .item
-	@include span(3)
-	@include breakpoint((max-width:60em))
-		@include span(12)
-		margin-bottom: ms(1)
+	clear: both
+
 	// outline: 1px solid red
 	background-color: $jackgreen
 
 	padding: 16px
+	@include span(3)
+	@include breakpoint((max-width:60em))
+		@include span(12)
+		margin-bottom: ms(1)
 
 	h4
 		display: block
