@@ -13,47 +13,62 @@
 .logo
 	@include span(6)
 	position: relative
-	outline: 1px solid $jackred
+	// outline: 1px solid $jackred
 	// background-color: green
-	margin-top: 5px
+	margin-top: 20px
 	padding: 0
 	height: 100%
 	vertical-align: bottom
 	// vertical-align: center
 	// font-size: ms(1)
-	@include breakpoint((max-width: 42em))
-		// margin-top: 32px
+	@include breakpoint((max-width: $bp-sml))
+		margin-top: 12px
 		@include span(12)
+		
+		h3
+			font-size: ms(2)
+			text-align: center
+			// margin-top: 0
 	h3
 		// font-size: ms(2)
 		line-height: 1
-		margin-top: 14px
+		// margin-top: 14px
 		color: $jackaqua
-		@include breakpoint((max-width: 42em))
-			font-size: ms(2)
-			text-align: center
-			margin-top: 0
+
+		// text-align: center
+		// margin-top: 0  
+		// @include breakpoint((max-width: 42em))
+			// font-size: ms(2)
+			// text-align: center
+			// margin-top: 0
 
 .topnav
 	// @include clearfix
 	margin-top: 36px
 	@include span(last 3)
-	background-color: yellow
-	@include breakpoint((max-width: 42em))
+	// background-color: yellow
+	@include breakpoint((max-width:$bp-md))
 		@include span(last 6)
-	@include breakpoint((max-width: 60em))
+	@include breakpoint((max-width:$bp-sml))
+		margin-top: 12px
 		@include span(12)
 
 
 .nav-item
 
 	display: inline-block
-	background-color: blue 
+	// background-color: blue 
 	@include span(1 of 3)
-	@include breakpoint((max-width: 42em))
+	@include breakpoint((max-width:$bp-md))
 		@include span(2 of 6)
-	@include breakpoint((max-width: 60em))
+		a
+			text-align: right
+	@include breakpoint((max-width:$bp-sml))
 		@include span(4 of 12)
+		
+		a
+			text-align: center
+
 
 	
 	// background-color: #669FB3
@@ -63,11 +78,12 @@
 	// @include span (1.5)
 	&:last-child
 		@include span(1 of 3 last)
-		@include breakpoint((max-width: 60em))
-			@include span(4 of 12 last)
-		@include breakpoint((max-width: 42em))
+		@include breakpoint((max-width: $bp-md))
 			@include span(2 of 6 last)
+		@include breakpoint((max-width: $bp-sml))
+			@include span(4 of 12 last)
 	a
+		// text-align: right
 		display: block
 		text-decoration: none
 		padding: 10px 0
