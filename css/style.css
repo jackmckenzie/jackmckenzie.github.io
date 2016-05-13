@@ -225,31 +225,38 @@ h5 {
 /* line 7, ../sass/modules/_main.sass */
 .main h1 {
   font-size: 76px;
-  line-height: 200px;
+  line-height: 1.2;
   text-align: center;
   color: #f2635f;
+  margin: 29px auto;
 }
 @media (min-width: 768px) {
   /* line 1, ../sass/modules/_main.sass */
   .main {
     padding: 0 0 47px 0;
   }
-  /* line 15, ../sass/modules/_main.sass */
+  /* line 16, ../sass/modules/_main.sass */
   .main h1 {
     font-size: 123px;
-    line-height: 323px;
+    margin: 47px auto;
   }
 }
 
-/* line 18, ../sass/modules/_main.sass */
+/* line 20, ../sass/modules/_main.sass */
 .feature-list {
-  padding: 47px 0;
+  padding: 15px 0;
   background-color: #50a29c;
 }
+@media (min-width: 768px) {
+  /* line 20, ../sass/modules/_main.sass */
+  .feature-list {
+    padding: 47px 0;
+  }
+}
 
-/* line 22, ../sass/modules/_main.sass */
+/* line 26, ../sass/modules/_main.sass */
 .item {
-  margin-bottom: 29px;
+  margin-bottom: 15px;
   width: 100%;
   float: left;
   margin-left: 0;
@@ -258,7 +265,7 @@ h5 {
   padding: 16px;
 }
 @media (min-width: 768px) {
-  /* line 22, ../sass/modules/_main.sass */
+  /* line 26, ../sass/modules/_main.sass */
   .item {
     width: 48.57143%;
     float: left;
@@ -266,15 +273,16 @@ h5 {
   }
 }
 @media (min-width: 992px) {
-  /* line 22, ../sass/modules/_main.sass */
+  /* line 26, ../sass/modules/_main.sass */
   .item {
     width: 22.85714%;
     float: left;
     margin-right: 2.85714%;
+    margin-bottom: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 40, ../sass/modules/_main.sass */
+  /* line 45, ../sass/modules/_main.sass */
   .item:nth-child(2) {
     width: 48.57143%;
     float: right;
@@ -282,15 +290,19 @@ h5 {
   }
 }
 @media (min-width: 992px) {
-  /* line 40, ../sass/modules/_main.sass */
+  /* line 45, ../sass/modules/_main.sass */
   .item:nth-child(2) {
     width: 22.85714%;
     float: left;
     margin-right: 2.85714%;
   }
 }
+/* line 51, ../sass/modules/_main.sass */
+.item:last-child {
+  margin-bottom: 0;
+}
 @media (min-width: 768px) {
-  /* line 46, ../sass/modules/_main.sass */
+  /* line 51, ../sass/modules/_main.sass */
   .item:last-child {
     width: 48.57143%;
     float: right;
@@ -298,14 +310,14 @@ h5 {
   }
 }
 @media (min-width: 992px) {
-  /* line 46, ../sass/modules/_main.sass */
+  /* line 51, ../sass/modules/_main.sass */
   .item:last-child {
     width: 22.85714%;
     float: right;
     margin-right: 0;
   }
 }
-/* line 52, ../sass/modules/_main.sass */
+/* line 58, ../sass/modules/_main.sass */
 .item h4 {
   display: block;
   text-align: center;
