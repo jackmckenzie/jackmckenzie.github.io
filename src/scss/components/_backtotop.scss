@@ -1,0 +1,55 @@
+.backtotop {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+    0px 6px 12px 0px rgba(16, 104, 87, 0.12);
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: 200ms ease transform, 200ms ease opacity, 200ms ease visibility;
+
+  &:hover {
+    background-color: rgb(237, 253, 247);
+  }
+  &:focus {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+      0px 6px 12px 0px rgba(16, 104, 87, 0.12),
+      0 0 0 3px rgba(13, 186, 145, 0.3);
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.12),
+      0px 6px 12px 0px rgba(16, 104, 87, 0.12), 0 0 0 3px rgba($emphasis, 1);
+  }
+
+  svg {
+    width: 20px;
+    height: 10px;
+    overflow: visible;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+}
+
+@include breakpoint(sm) {
+  .backtotop {
+    bottom: 3rem;
+    right: 3rem;
+  }
+}

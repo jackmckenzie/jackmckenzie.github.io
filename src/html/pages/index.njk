@@ -14,16 +14,18 @@
       <div class="row">
         <div class="col-lg-10">
           <h2>My work</h2>
-          <p>In my current role I have had the opportunity to work on many challenging projects</p>
+          {# <p>In my current role I have had the opportunity to work on many challenging projects</p> #}
           {{ project.project(
           'rbac',
             'Roles-based user access control',
             [
               "The purpose of this retail software project was to allow administrative users to create and choose custom roles for users. They are able to create a user, assign them a role and a store and send them an activation email.",
-              "I was the designer and front-end developer for this project, working with a product manager and back-end developer."
+              "I was the designer and front-end developer for this project, working with a product manager and back-end developer. I also wrote some back-end code in Django."
             ],
             [
-              "Designed and built a “permissions control” widget using React & Typescript that provides users finer control over a Role's permissions."
+              "Designed and built a “permissions control” widget using React & Typescript that provides users finer control over a Role's permissions.",
+              "Extensively iterated prototypes over several rounds of tests with users",
+              "Redesigned and handcoded an activation email that changes its messaging based on data such as user role and store"
             ],
             ['PD','FE','BE'],
             ["rbac-1.png", "rbac-2.png"]

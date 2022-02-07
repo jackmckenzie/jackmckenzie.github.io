@@ -43,10 +43,10 @@ const scrollToTop = (event) => {
 
 document.addEventListener("scroll", (e) => {
   console.log("scrolling!");
-  if (window.scrollY > 0) {
-    backToTopButton.style.display = "flex";
+  if (window.scrollY > 60) {
+    backToTopButton.classList.add("show");
   } else {
-    backToTopButton.style.display = "none";
+    backToTopButton.classList.remove("show");
   }
 });
 

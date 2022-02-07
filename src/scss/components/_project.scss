@@ -54,7 +54,7 @@
 
 .reveal-content {
   max-height: 0px;
-
+  overflow: hidden;
   transition: 320ms ease max-height;
   &-inner {
     padding: 1.5rem;
