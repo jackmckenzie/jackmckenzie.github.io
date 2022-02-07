@@ -15,7 +15,26 @@
         <div class="col-lg-10">
           <h2>My work</h2>
           {# <p>In my current role I have had the opportunity to work on many challenging projects</p> #}
-          {{ project.project(
+          <button class="reveal-trigger">
+            <h3>Roles-based user access control</h3>
+            <div class="badges">
+              <span class="badge badge-design">Design</span>
+              <span class="badge badge-frontend">Frontend</span>
+              <span class="badge badge-backend">Backend</span>
+            </div>
+            <span class="reveal-info">Click to show more</span>
+          </button>
+          <a class="reveal-trigger" href="projects/rbac.html">
+            <h3>Roles-based user access control</h3>
+            <div class="badges">
+              <span class="badge badge-design">Design</span>
+              <span class="badge badge-frontend">Frontend</span>
+              <span class="badge badge-backend">Backend</span>
+            </div>
+            <span class="reveal-info">Click to show more</span>
+
+          </a>
+          {# {{ project.project(
           'rbac',
             'Roles-based user access control',
             [
@@ -29,10 +48,10 @@
             ],
             ['PD','FE','BE'],
             ["rbac-1.png", "rbac-2.png"]
-          )}}
+          )}} #}
           {{ project.project(
           'form-components',
-            "Accessible form components",
+            "Accessible Form Components",
             [
               "Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises designs. The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer."
             ],

@@ -28,7 +28,7 @@ function reload(cb) {
 
 function html() {
   return gulp
-    .src("src/html/pages/*")
+    .src("src/html/pages/**/*")
     // .pipe(changed("src/html/**/*"))
     .pipe(njk({ path: ["src/html"] }))
     .pipe(beautify.html({ indent_size: 2, preserve_newlines: false }))
