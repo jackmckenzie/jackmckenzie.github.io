@@ -1,0 +1,16 @@
+@use "sass:map";
+
+@mixin breakpoint($point) {
+  @media screen and (min-width: map.get($breakpoints, $point)) {
+    @content;
+  }
+}
+
+@mixin focus-ring($type: outline) {
+  @if $type == "outline" {
+    outline: 2px solid $emphasis;
+    outline-offset: 1px;
+  } @else if $type == "shadow" {
+    box-shadow: 0 0 3px $emphasis;
+  }
+}

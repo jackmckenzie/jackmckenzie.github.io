@@ -1,0 +1,16 @@
+{% set page_title = 'About' %}
+{% set body_id = 'about' %}
+
+{% import "partials/heading.njk" as heading %}
+
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+  {{ heading.heading('Contact Me', 'Get in touch via LinkedIn') }}
+  <div class="content">
+    <div class="container">
+      <h2>Me</h2>
+      <p>I used to play bass in a band! We did some <a href="https://www.youtube.com/watch?v=oOz8L7pg2Lc">pretty cool things</a>.</p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+// Base imports
+@import "normalize.scss/normalize.scss";
+@import "base/base";
+@import "base/variables";
+@import "base/mixins";
+@import "base/grid";
+@import "base/typography";
+
+@import "components/header";
+@import "components/footer";
+@import "components/badges";
+@import "components/project";
+
+@import "partials/heading";

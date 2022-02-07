@@ -1,0 +1,246 @@
+<!--  -->
+<!-- This website is handcoded using nunjucks, sass and gulp. -->
+<!-- I've kept it bare as not everything needs to be React. -->
+<!-- Feel free to poke around and check out the code at https://github.com/jackmckenzie/jackmckenzie.github.io -->
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Jack McKenzie - Developer, Perth, Western Australia | Work </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+</head>
+
+<body id="work">
+  <header>
+    <div class="container">
+      <div class="site-header">
+        <div class="logo">
+          <a href="/">Jack McKenzie</a>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item active">
+              <a href="/">Work</a>
+            </li>
+            <li class="nav-item">
+              <a href="./about.html">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="heading">
+    <div class="container">
+      <h1 class="heading-title">Front-End Developer with design chops 🥋</h1>
+      <p class="heading-tagline">Hi, I&#39;m Jack, a hybrid developer/designer who&#39;s passionate about inclusive design that solves complex problems.</p>
+    </div>
+  </main>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <h2>My work</h2>
+          <p>In my current role I have had the opportunity to work on many challenging projects</p>
+          <div id="rbac" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Roles-based user access control</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+                <span class="badge badge-frontend">Frontend</span>
+                <span class="badge badge-backend">Backend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <div class="project-images">
+                  <img class="project-images-image" src="img/projects/rbac-1.png" data-slide="rbac-1" />
+                  <img class="project-images-image" src="img/projects/rbac-2.png" data-slide="rbac-1" />
+                </div>
+                <p>The purpose of this retail software project was to allow administrative users to create and choose custom roles for users. They are able to create a user, assign them a role and a store and send them an activation email.</p>
+                <p>I was the designer and front-end developer for this project, working with a product manager and back-end developer.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Designed and built a “permissions control” widget using React &amp; Typescript that provides users finer control over a Role&#39;s permissions.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="form-components" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Accessible form components</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+                <span class="badge badge-frontend">Frontend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <p>Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises designs. The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Provide an &#39;id&#39; and the correct labelling and aria descriptions (including hint text and error text) are applied</li>
+                  <li>Implemented a character countdown for the TextArea</li>
+                  <li>Written in Typescript/React with 100% unit test coverage</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="runtime-logs" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Runtime Logs</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+                <span class="badge badge-frontend">Frontend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <p>Error logs for complex business rule functions.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Click a log to view more details in a sidebar, with a link to view the log in detail</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="lastyard-blog" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Last Yard Blog</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+                <span class="badge badge-frontend">Frontend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <p>After having our new website built, we wanted to carry over our blog content from the old website.</p>
+                <p>The quoted price to have it built was out of budget, so I took on the task of developing it in-house. I was able to create the new blog in Storyblok/Typescript in about a week.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Handwritten blog system including authors, dates, etc</li>
+                  <li>Familiarised myself with Storyblok, Vercel, Next and headless CMS</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="dse" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Digital Shelf Edge</h3>
+              <div class="badges">
+                <span class="badge badge-frontend">Frontend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <p>Software for emergent retail systems.</p>
+                <p>DSE is a custom screen that sits on the shelf, replacing the need to re-ticket the shelf.</p>
+                <p>I designed and wrote a complex custom React template that takes the store&#39;s product data and populates the content on the screen.</p>
+                <p>The software allows the user to set custom spacing based on product width and facings, to finetune how the layout should appear.</p>
+                <p>The user can also set flags such as Out of stock, on special, on clearance to show engaging promotions and information.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Complex real-time API calling in React</li>
+                  <li>Customisations including animation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="digital-screens" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Digital in-store advertising screens</h3>
+              <div class="badges">
+                <span class="badge badge-frontend">Frontend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <p>I wrote the templates used to display content on these screens, with functions such as carousel, grid layouts, customisable timing, etc.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Written from scratch in HTML/SCSS/JS using Gulp to build</li>
+                  <li>Complex real-time API calling in React</li>
+                  <li>Customisations including animation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-scanner" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Mobile Scanner</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <p>The mobile scanner was created to help users in-store to replace missing tickets. Through customer feedback and interviews, we discovered that stores would often need to reprint their tickets outside of their usual print runs. This was typically achieved by writing down lengthy barcode numbers, by hand, to be manually entered into Last Yard. I led the design for this feature with a focus on providing speed and accuracy. We ran multiple sessions including extensive user interviews and prototype testing to learn how we could improve these processes and provide a better ticketing experience.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>Short project, about 3 months. Feedback from customers has been highly positive.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="logo">
+            <a href="/">Jack McKenzie</a>
+          </div>
+        </div>
+        <div class="col">
+          <ul class="socials">
+            <li>
+              <a href="#">LinkedIn</a>
+            </li>
+            <li>
+              <a href="#">Github</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul class="links">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+  <button class="backtotop" id="js-to-top">
+    <svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
+      <path fill="none" stroke-width="2px" stroke="#106857" stroke-linejoin="round" d="M0,10 L10,0 L20,10" />
+    </svg>
+  </button>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

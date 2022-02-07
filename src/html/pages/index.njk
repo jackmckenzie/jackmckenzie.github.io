@@ -1,0 +1,114 @@
+{% set page_title = 'Work' %}
+{% set body_id = 'work' %}
+
+{% import "partials/heading.njk" as heading %}
+{% import "partials/project.njk" as project %}
+
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+  {{ heading.heading('Front-End Developer with design chops 🥋', "Hi, I'm Jack, a hybrid developer/designer who's passionate about inclusive
+        design that solves complex problems.") }}
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <h2>My work</h2>
+          <p>In my current role I have had the opportunity to work on many challenging projects</p>
+          {{ project.project(
+          'rbac',
+            'Roles-based user access control',
+            [
+              "The purpose of this retail software project was to allow administrative users to create and choose custom roles for users. They are able to create a user, assign them a role and a store and send them an activation email.",
+              "I was the designer and front-end developer for this project, working with a product manager and back-end developer."
+            ],
+            [
+              "Designed and built a “permissions control” widget using React & Typescript that provides users finer control over a Role's permissions."
+            ],
+            ['PD','FE','BE'],
+            ["rbac-1.png", "rbac-2.png"]
+          )}}
+          {{ project.project(
+          'form-components',
+            "Accessible form components",
+            [
+              "Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises designs. The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer."
+            ],
+            [
+              "Provide an 'id' and the correct labelling and aria descriptions (including hint text and error text) are applied",
+              "Implemented a character countdown for the TextArea",
+              "Written in Typescript/React with 100% unit test coverage"
+            ],
+            ['PD', 'FE']
+          )}}
+          {{ project.project(
+          'runtime-logs',
+            "Runtime Logs",
+            [
+              "Error logs for complex business rule functions."
+            ],
+            [
+              "Click a log to view more details in a sidebar, with a link to view the log in detail"
+            ],
+            ['PD', 'FE']
+          )}}
+          {{ project.project(
+          'lastyard-blog',
+            "Last Yard Blog",
+            [
+              "After having our new website built, we wanted to carry over our blog content from the old website.",
+              "The quoted price to have it built was out of budget, so I took on the task of developing it in-house. I was able to create the new blog in Storyblok/Typescript in about a week."
+            ],
+            [
+              "Handwritten blog system including authors, dates, etc",
+              "Familiarised myself with Storyblok, Vercel, Next and headless CMS"
+            ],
+            ['PD', 'FE']
+          )}}
+          {{ project.project(
+          'dse',
+            "Digital Shelf Edge",
+            [
+              "Software for emergent retail systems.",
+              "DSE is a custom screen that sits on the shelf, replacing the need to re-ticket the shelf.",
+              "I designed and wrote a complex custom React template that takes the store's product data and populates the content on the screen.",
+              "The software allows the user to set custom spacing based on product width and facings, to finetune how the layout should appear.",
+              "The user can also set flags such as Out of stock, on special, on clearance to show engaging promotions and information."
+            ],
+            [
+              "Complex real-time API calling in React",
+              "Customisations including animation"
+            ],
+            ['FE']
+          )}}
+          {{ project.project(
+          'digital-screens',
+            "Digital in-store advertising screens",
+            [
+              "I wrote the templates used to display content on these screens, with functions such as carousel, grid layouts, customisable timing, etc."
+            ],
+            [
+              "Written from scratch in HTML/SCSS/JS using Gulp to build",
+              "Complex real-time API calling in React",
+              "Customisations including animation"
+            ],
+            ['FE']
+          )}}
+          {{ project.project(
+          'mobile-scanner',
+            "Mobile Scanner",
+            [
+              "The mobile scanner was created to help users in-store to replace missing tickets.
+              Through customer feedback and interviews, we discovered that stores would often need to reprint their tickets outside of their usual print runs. This was typically achieved by writing down lengthy barcode numbers, by hand, to be manually entered into Last Yard.
+              I led the design for this feature with a focus on providing speed and accuracy. We ran multiple sessions including extensive user interviews and prototype testing to learn how we could improve these processes and provide a better ticketing experience."
+            ],
+            [
+              "Short project, about 3 months. Feedback from customers has been highly positive."
+            ],
+            ['PD']
+          )}}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

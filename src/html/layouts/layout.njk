@@ -1,0 +1,33 @@
+<!--  -->
+<!-- This website is handcoded using nunjucks, sass and gulp. -->
+<!-- I've kept it bare as not everything needs to be React. -->
+<!-- Feel free to poke around and check out the code at https://github.com/jackmckenzie/jackmckenzie.github.io -->
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>
+      Jack McKenzie - Developer, Perth, Western Australia | {{ page_title }}
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    {# Favicon #}
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+  </head>
+  <body id="{{ body_id }}">
+    {% include "partials/header.njk" %}
+    {% block content %}{% endblock %}
+    {% include "partials/footer.njk" %}
+
+    {% include "partials/backtotop.njk" %}
+    <script src="js/main.js"></script>
+  </body>
+</html>

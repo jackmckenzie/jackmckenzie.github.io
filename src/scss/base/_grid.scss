@@ -1,0 +1,53 @@
+@use "sass:math";
+
+.container {
+  max-width: var(--container-width);
+  padding-left: var(--spacing-x);
+  padding-right: var(--spacing-x);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-fluid {
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: calc(var(--spacing-x) * -1);
+  margin-right: calc(var(--spacing-x) * -1);
+  &-centered {
+    justify-content: center;
+  }
+}
+
+.col,
+[class*="col-"] {
+  flex: 1 0;
+  max-width: 100%;
+  padding-left: var(--spacing-x);
+  padding-right: var(--spacing-x);
+}
+
+// Base column setup
+@for $column from 1 to 13 {
+  .col-#{$column} {
+    flex: 0 0 auto;
+    flex-basis: math.div($column, 12) * 100%;
+  }
+}
+
+// Responsive columns
+@each $name, $size in $breakpoints {
+  @media (min-width: $size) {
+    @for $column from 1 to 13 {
+      .col-#{$name}-#{$column} {
+        flex: 0 0 auto;
+        flex-basis: math.div($column, 12) * 100%;
+      }
+    }
+  }
+}

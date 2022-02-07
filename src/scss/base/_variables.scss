@@ -1,0 +1,21 @@
+:root {
+  --container-width: 1140px;
+  --container-width-xl: 1320px;
+  --spacing-x: 20px;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1320px;
+}
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1320px,
+);
+
+
+$emphasis: #0FB0F5;
