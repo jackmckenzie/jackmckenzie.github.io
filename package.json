@@ -20,5 +20,8 @@
     "normalize.scss": "^0.1.0",
     "nunjucks-markdown": "^2.0.1",
     "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "fslightbox": "^3.3.1"
   }
 }

@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
 </head>
@@ -63,8 +63,9 @@
             <div class="reveal-content">
               <div class="reveal-content-inner">
                 <div class="project-images">
-                  <img class="project-images-image" src="img/projects/rbac-1.png" data-slide="rbac-1" />
-                  <img class="project-images-image" src="img/projects/rbac-2.png" data-slide="rbac-1" />
+                  <a data-fslightbox="rbac" class="project-image" href="/img/projects/rbac-activation-email.png" data-description="RBAC Activation Email"><img src="/img/projects/rbac-activation-email.png" alt="RBAC Activation Email" /></a>
+                  <a data-fslightbox="rbac" class="project-image" href="/img/projects/rbac-figma-redlines.png" data-description="RBAC Figma Redlines"><img src="/img/projects/rbac-figma-redlines.png" alt="RBAC Figma Redlines" /></a>
+                  <a data-fslightbox="rbac" class="project-image" href="/img/projects/rbac-permission-control.png" data-description="RBAC Permission Control Widget"><img src="/img/projects/rbac-permission-control.png" alt="RBAC Permission Control Widget" /></a>
                 </div>
                 <p>The purpose of this retail software project was to allow administrative users to create and choose custom roles for users. They are able to create a user, assign them a role and a store and send them an activation email.</p>
                 <p>I was the designer and front-end developer for this project, working with a product manager and back-end developer. I also wrote some back-end code in Django.</p>
@@ -88,6 +89,9 @@
             </button>
             <div class="reveal-content">
               <div class="reveal-content-inner">
+                <div class="project-images">
+                  <a data-fslightbox="form-components" class="project-image" href="/img/projects/forms-input-errors.png" data-description="Accessible form errors"><img src="/img/projects/forms-input-errors.png" alt="Accessible form errors" /></a>
+                </div>
                 <p>Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises designs. The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer.</p>
                 <p class="list-header">Highlights</p>
                 <ul>
@@ -238,7 +242,8 @@
       <path fill="none" stroke-width="2px" stroke="#106857" stroke-linejoin="round" d="M0,10 L10,0 L20,10" />
     </svg>
   </button>
-  <script src="js/main.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/fslightbox.min.js" type="application/javascript"></script>
 </body>
 
 </html>

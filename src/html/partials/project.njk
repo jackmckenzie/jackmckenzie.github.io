@@ -22,8 +22,8 @@
       <div class="reveal-content-inner">
         {% if images %}
           <div class="project-images">
-            {% for image in images %}
-              <img class="project-images-image" src="img/projects/{{ image }}" data-slide="{{ id }}-1"/>
+            {% for image, description in images %}
+              <a data-fslightbox="{{ id }}" class="project-image" href="/img/projects/{{ image }}" data-description="{{ description }}"><img src="/img/projects/{{ image }}" alt="{{ description }}" /></a>
             {% endfor %}
           </div>
         {% endif %}

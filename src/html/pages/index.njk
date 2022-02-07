@@ -4,6 +4,10 @@
 {% import "partials/heading.njk" as heading %}
 {% import "partials/project.njk" as project %}
 
+{% block js %}
+  <script src="/js/fslightbox.min.js" type="application/javascript"></script>
+{% endblock %}
+
 {% extends "layouts/layout.njk" %}
 
 {% block content %}
@@ -28,7 +32,7 @@
               "Redesigned and handcoded an activation email that changes its messaging based on data such as user role and store"
             ],
             ['PD','FE','BE'],
-            ["rbac-1.png", "rbac-2.png"]
+            [["rbac-activation-email.png", "RBAC Activation Email"], ["rbac-figma-redlines.png", "RBAC Figma Redlines"], ["rbac-permission-control.png", "RBAC Permission Control Widget"]]
           )}}
           {{ project.project(
           'form-components',
@@ -41,7 +45,8 @@
               "Implemented a character countdown for the TextArea",
               "Written in Typescript/React with 100% unit test coverage"
             ],
-            ['PD', 'FE']
+            ['PD', 'FE'],
+            [["forms-input-errors.png", "Accessible form errors"]]
           )}}
           {{ project.project(
           'runtime-logs',
