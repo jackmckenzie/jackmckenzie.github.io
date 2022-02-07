@@ -1027,22 +1027,56 @@ footer ul li {
 
 .project-images {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-bottom: 1.5rem;
 }
-.project-images-image {
+.project-images .project-image {
   width: 25%;
-  transition: transform 240ms ease;
+  max-height: 12rem;
+  transition: transform 240ms ease, box-shadow 240ms ease;
   transform: scale(1);
   cursor: pointer;
-}
-.project-images-image:hover {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+.project-images .project-image::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-description);
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: opacity 240ms ease-out, transform 240ms ease-out;
+}
+.project-images .project-image:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   transform: scale(1.02);
 }
-.project-images-image:focus {
+.project-images .project-image:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+.project-images .project-image:focus {
   outline: 2px solid #0FB0F5;
   outline-offset: 1px;
+}
+.project-images .project-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .reveal-trigger {
