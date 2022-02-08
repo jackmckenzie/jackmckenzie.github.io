@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/glightbox.min.css" />
   <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
 </head>
@@ -41,7 +42,7 @@
   </header>
   <main class="heading">
     <div class="container">
-      <h1 class="heading-title">Front-End Developer with design chops 🥋</h1>
+      <h1 class="heading-title">Front End Developer with design chops 🥋</h1>
       <p class="heading-tagline">Hi, I&#39;m Jack, a hybrid developer/designer who&#39;s passionate about inclusive design that solves complex problems.</p>
     </div>
   </main>
@@ -63,9 +64,15 @@
             <div class="reveal-content">
               <div class="reveal-content-inner">
                 <div class="project-images">
-                  <a data-fslightbox="rbac" class="project-image" href="/img/projects/rbac-activation-email.png" data-description="RBAC Activation Email"><img src="/img/projects/rbac-activation-email.png" alt="RBAC Activation Email" /></a>
-                  <a data-fslightbox="rbac" class="project-image" href="/img/projects/rbac-figma-redlines.png" data-description="RBAC Figma Redlines"><img src="/img/projects/rbac-figma-redlines.png" alt="RBAC Figma Redlines" /></a>
-                  <a data-fslightbox="rbac" class="project-image" href="/img/projects/rbac-permission-control.png" data-description="RBAC Permission Control Widget"><img src="/img/projects/rbac-permission-control.png" alt="RBAC Permission Control Widget" /></a>
+                  <a class="project-image glightbox" data-gallery="gallery-rbac" data-glightbox="title: RBAC Permission Control Widget; description: This widget allows an admin user to pick permissions for a role. The green dot on the left fills up halfway to show the role has partial access, and fully when they have full access. It tested well with users." data-description="RBAC Permission Control Widget" href="/img/projects/rbac-permission-control.png">
+                    <img src="/img/projects/rbac-permission-control.png" alt="This widget allows an admin user to pick permissions for a role. The green dot on the left fills up halfway to show the role has partial access, and fully when they have full access. It tested well with users." />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-rbac" data-glightbox="title: RBAC Design File (Redlines); description: " data-description="RBAC Design File (Redlines)" href="/img/projects/rbac-design-file-redlines.png">
+                    <img src="/img/projects/rbac-design-file-redlines.png" alt="" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-rbac" data-glightbox="title: RBAC Activation Email; description: This email shows who invited you and which store they invited you to." data-description="RBAC Activation Email" href="/img/projects/rbac-activation-email.png">
+                    <img src="/img/projects/rbac-activation-email.png" alt="This email shows who invited you and which store they invited you to." />
+                  </a>
                 </div>
                 <p>The purpose of this retail software project was to allow administrative users to create and choose custom roles for users. They are able to create a user, assign them a role and a store and send them an activation email.</p>
                 <p>I was the designer and front-end developer for this project, working with a product manager and back-end developer. I also wrote some back-end code in Django.</p>
@@ -90,14 +97,90 @@
             <div class="reveal-content">
               <div class="reveal-content-inner">
                 <div class="project-images">
-                  <a data-fslightbox="form-components" class="project-image" href="/img/projects/forms-input-errors.png" data-description="Accessible form errors"><img src="/img/projects/forms-input-errors.png" alt="Accessible form errors" /></a>
+                  <a class="project-image glightbox" data-gallery="gallery-form-components" data-glightbox="title: Accessible form errors; description: " data-description="Accessible form errors" href="/img/projects/forms-input-errors.png">
+                    <img src="/img/projects/forms-input-errors.png" alt="" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-form-components" data-glightbox="title: Text Input component; description: Left: Typescript input example. Right: HTML output with accessible aria properties" data-description="Text Input component" href="/img/projects/textinput-code.png">
+                    <img src="/img/projects/textinput-code.png" alt="Left: Typescript input example. Right: HTML output with accessible aria properties" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-form-components" data-glightbox="title: Text Area character countdown; description: Set characterCount on the component to visually show when a user has exceeded the allowed amount." data-description="Text Area character countdown" href="/img/projects/textarea-character-count.gif">
+                    <img src="/img/projects/textarea-character-count.gif" alt="Set characterCount on the component to visually show when a user has exceeded the allowed amount." />
+                  </a>
                 </div>
-                <p>Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises designs. The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer.</p>
+                <p>Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises design.</p>
+                <p>The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer.</p>
+                <p>I designed and created the components as we needed them, starting with Text Input, Text Area and a set of buttons.</p>
                 <p class="list-header">Highlights</p>
                 <ul>
                   <li>Provide an &#39;id&#39; and the correct labelling and aria descriptions (including hint text and error text) are applied</li>
                   <li>Implemented a character countdown for the TextArea</li>
                   <li>Written in Typescript/React with 100% unit test coverage</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="template-design" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Template Design</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+                <span class="badge badge-frontend">Frontend</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <div class="project-images">
+                  <a class="project-image glightbox" data-gallery="gallery-template-design" data-glightbox="title: Template Design Screenshot; description: " data-description="Template Design Screenshot" href="/img/projects/template-design.png">
+                    <img src="/img/projects/template-design.png" alt="" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-template-design" data-glightbox="title: Smart Groups concepts (GIF); description: A concept GIF to explain the purpose of smart groups to internal stakeholders. This shows a complex set of layouts that can be achieved without code." data-description="Smart Groups concepts (GIF)" href="/img/projects/smartgroups-1.gif">
+                    <img src="/img/projects/smartgroups-1.gif" alt="A concept GIF to explain the purpose of smart groups to internal stakeholders. This shows a complex set of layouts that can be achieved without code." />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-template-design" data-glightbox="title: Smart Groups concepts (GIF); description: A concept GIF to explain the purpose of smart groups to customers. This shows how a smart group works in context of creating a ticket. When fields don&#39;t have values, the remaining fields resize to fill the remaining space." data-description="Smart Groups concepts (GIF)" href="/img/projects/smartgroups-2.gif">
+                    <img src="/img/projects/smartgroups-2.gif" alt="A concept GIF to explain the purpose of smart groups to customers. This shows how a smart group works in context of creating a ticket. When fields don&#39;t have values, the remaining fields resize to fill the remaining space." />
+                  </a>
+                </div>
+                <p>Proprietary web-based design software.</p>
+                <p>This software is designed to allow users to create their own templates to print their paper promotional tickets.</p>
+                <p>It was recognised that our old desktop-based software posed a business risk, as it was too difficult for clients to effectively use.</p>
+                <p>I was heavily involved in this project from the outset, collaborating with a senior UX consultant on the initial UI. I then took on the role of sole designer and contributed front end code to the project, tidying up sidebar properties and adding some features.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>We created an entire design app in about 6 months!</li>
+                  <li>I worked closely with our full-stack developers and was relied upon for questions about how things should work, look and feel</li>
+                  <li>Designed smart groups: Similar to Flexbox and Figma&#39;s auto layout, these allow content to fill up remaining space when other content hasn&#39;t been filled in. In our legacy software, this was achieved with complex javascript code.</li>
+                  <li>Designed complex price fields that allow a user to have fine control over how their dollar and cents symbols should look</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="mobile-scanner" class="project reveal" aria-expanded="false">
+            <button class="reveal-trigger">
+              <h3>Mobile Scanner</h3>
+              <div class="badges">
+                <span class="badge badge-design">Design</span>
+              </div>
+              <span class="reveal-info">Click to show more</span>
+            </button>
+            <div class="reveal-content">
+              <div class="reveal-content-inner">
+                <div class="project-images">
+                  <a class="project-image glightbox" data-gallery="gallery-mobile-scanner" data-glightbox="title: Early click-through prototype; description: We extensively tested with customers. This is an early version shown to customers, whose valuable feedback was implemented in future prototypes and  the final product" data-description="Early click-through prototype" href="/img/projects/mobile-scanner-early-prototype.png">
+                    <img src="/img/projects/mobile-scanner-early-prototype.png" alt="We extensively tested with customers. This is an early version shown to customers, whose valuable feedback was implemented in future prototypes and  the final product" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-mobile-scanner" data-glightbox="title: Design File (Scanning Flow); description: Part of the design file given to the developer detailing how a user scans a product, and what should occur when it fails" data-description="Design File (Scanning Flow)" href="/img/projects/mobile-scanner-design-file-1.png">
+                    <img src="/img/projects/mobile-scanner-design-file-1.png" alt="Part of the design file given to the developer detailing how a user scans a product, and what should occur when it fails" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-mobile-scanner" data-glightbox="title: Design File (Delete Flow); description: Part of the design file given to the developer detailing deleting an item, and feedback given to the user" data-description="Design File (Delete Flow)" href="/img/projects/mobile-scanner-design-file-2.png">
+                    <img src="/img/projects/mobile-scanner-design-file-2.png" alt="Part of the design file given to the developer detailing deleting an item, and feedback given to the user" />
+                  </a>
+                </div>
+                <p>The mobile scanner was created to help users in-store to replace missing tickets. Through customer feedback and interviews, we discovered that stores would often need to reprint their tickets outside of their usual print runs. This was typically achieved by writing down lengthy barcode numbers, by hand, to be manually entered into Last Yard. I led the design for this feature with a focus on providing speed and accuracy. We ran multiple sessions including extensive user interviews and prototype testing to learn how we could improve these processes and provide a better ticketing experience.</p>
+                <p>Customer feedback has been highly positive.</p>
+                <p class="list-header">Highlights</p>
+                <ul>
+                  <li>A short, 3 month product-driven project with a thorough design process</li>
                 </ul>
               </div>
             </div>
@@ -113,10 +196,18 @@
             </button>
             <div class="reveal-content">
               <div class="reveal-content-inner">
+                <div class="project-images">
+                  <a class="project-image glightbox" data-gallery="gallery-runtime-logs" data-glightbox="title: Runtime Logs example; description: Example of an opened log. The sidebar allows a user to keep scrolling and easily compare logs." data-description="Runtime Logs example" href="/img/projects/runtime-log.png">
+                    <img src="/img/projects/runtime-log.png" alt="Example of an opened log. The sidebar allows a user to keep scrolling and easily compare logs." />
+                  </a>
+                </div>
                 <p>Error logs for complex business rule functions.</p>
+                <p>This was a challenging project aimed towards power users of the product. They needed high detail and each log needed to be easy to share.</p>
+                <p>I created and coded a simple design for this that attempts to &quot;stay out of the way&quot;. Users of this tool have found it invaluable in their day to day work.</p>
                 <p class="list-header">Highlights</p>
                 <ul>
                   <li>Click a log to view more details in a sidebar, with a link to view the log in detail</li>
+                  <li>Familiarised myself with Django and calling Django APIs from React</li>
                 </ul>
               </div>
             </div>
@@ -132,6 +223,14 @@
             </button>
             <div class="reveal-content">
               <div class="reveal-content-inner">
+                <div class="project-images">
+                  <a class="project-image glightbox" data-gallery="gallery-lastyard-blog" data-glightbox="title: Blog List; description: " data-description="Blog List" href="/img/projects/blog-list.png">
+                    <img src="/img/projects/blog-list.png" alt="" />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-lastyard-blog" data-glightbox="title: Example of a blog post; description: I wrote this one!" data-description="Example of a blog post" href="/img/projects/blog-post.png">
+                    <img src="/img/projects/blog-post.png" alt="I wrote this one!" />
+                  </a>
+                </div>
                 <p>After having our new website built, we wanted to carry over our blog content from the old website.</p>
                 <p>The quoted price to have it built was out of budget, so I took on the task of developing it in-house. I was able to create the new blog in Storyblok/Typescript in about a week.</p>
                 <p class="list-header">Highlights</p>
@@ -155,12 +254,14 @@
                 <p>Software for emergent retail systems.</p>
                 <p>DSE is a custom screen that sits on the shelf, replacing the need to re-ticket the shelf.</p>
                 <p>I designed and wrote a complex custom React template that takes the store&#39;s product data and populates the content on the screen.</p>
-                <p>The software allows the user to set custom spacing based on product width and facings, to finetune how the layout should appear.</p>
-                <p>The user can also set flags such as Out of stock, on special, on clearance to show engaging promotions and information.</p>
+                <p>The software allows the user to set custom spacing based on product width and facings, to finetune how the layout should appear, and allows them to choose engaging promotions to show.</p>
+                <p>*I&#39;m unable to include pictures due to privacy of the project.</p>
                 <p class="list-header">Highlights</p>
                 <ul>
                   <li>Complex real-time API calling in React</li>
-                  <li>Customisations including animation</li>
+                  <li>Bundled with several different layouts based on information the user wants to show</li>
+                  <li>Customisations including animation and different promotions</li>
+                  <li>The stores that used this product were very impressed</li>
                 </ul>
               </div>
             </div>
@@ -175,30 +276,21 @@
             </button>
             <div class="reveal-content">
               <div class="reveal-content-inner">
+                <div class="project-images">
+                  <a class="project-image glightbox" data-gallery="gallery-digital-screens" data-glightbox="title: Digital Liquor Board; description: The six items you see onscreen are each separate templates, put in place by the templates I created." data-description="Digital Liquor Board" href="/img/projects/liquor-board.png">
+                    <img src="/img/projects/liquor-board.png" alt="The six items you see onscreen are each separate templates, put in place by the templates I created." />
+                  </a>
+                  <a class="project-image glightbox" data-gallery="gallery-digital-screens" data-glightbox="title: Digital animation; description: An example of a really simple but effective animation I created for the template." data-description="Digital animation" href="/img/projects/digital-animation.gif">
+                    <img src="/img/projects/digital-animation.gif" alt="An example of a really simple but effective animation I created for the template." />
+                  </a>
+                </div>
                 <p>I wrote the templates used to display content on these screens, with functions such as carousel, grid layouts, customisable timing, etc.</p>
+                <p>Chances are, you&#39;ve seen our software in a local IGA!</p>
                 <p class="list-header">Highlights</p>
                 <ul>
                   <li>Written from scratch in HTML/SCSS/JS using Gulp to build</li>
                   <li>Complex real-time API calling in React</li>
                   <li>Customisations including animation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div id="mobile-scanner" class="project reveal" aria-expanded="false">
-            <button class="reveal-trigger">
-              <h3>Mobile Scanner</h3>
-              <div class="badges">
-                <span class="badge badge-design">Design</span>
-              </div>
-              <span class="reveal-info">Click to show more</span>
-            </button>
-            <div class="reveal-content">
-              <div class="reveal-content-inner">
-                <p>The mobile scanner was created to help users in-store to replace missing tickets. Through customer feedback and interviews, we discovered that stores would often need to reprint their tickets outside of their usual print runs. This was typically achieved by writing down lengthy barcode numbers, by hand, to be manually entered into Last Yard. I led the design for this feature with a focus on providing speed and accuracy. We ran multiple sessions including extensive user interviews and prototype testing to learn how we could improve these processes and provide a better ticketing experience.</p>
-                <p class="list-header">Highlights</p>
-                <ul>
-                  <li>Short project, about 3 months. Feedback from customers has been highly positive.</li>
                 </ul>
               </div>
             </div>
@@ -243,7 +335,12 @@
     </svg>
   </button>
   <script src="/js/main.js"></script>
-  <script src="/js/fslightbox.min.js" type="application/javascript"></script>
+  <script src="/js/glightbox.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    const lightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  </script>
 </body>
 
 </html>
