@@ -1,0 +1,56 @@
+{# Headings #}
+{% macro heading(title, tagline) %}
+  <main class="heading">
+    <div class="container">
+      <h1 class="heading-title">{{ title }}</h1>
+      <p class="heading-tagline">{{ tagline }}</p>
+    </div>
+  </main>
+{% endmacro %}
+
+{# Project details #}
+{% macro project(id, title, paragraphs, highlights, tags, images) %}
+  <div id="{{ id }}" class="project reveal" aria-expanded="false">
+    <button class="reveal-trigger">
+      <h3>{{ title }}</h3>
+      {% if tags %}
+        <div class="badges">
+          {% for tag in tags %}
+            {% if tag == 'FE' %}
+              <span class="badge badge-frontend">Frontend</span>
+            {% elif tag == 'PD' %}
+              <span class="badge badge-design">Design</span>
+            {% elif tag == 'BE' %}
+              <span class="badge badge-backend">Backend</span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+      <span class="reveal-info">Click to show more</span>
+    </button>
+    <div class="reveal-content">
+      <div class="reveal-content-inner">
+        {% if images %}
+          <div class="project-images">
+            {% for image in images %}
+              <a class="project-image glightbox" data-gallery="gallery-{{ id }}" data-glightbox="title: {{ image.title }}; description: {{ image.description }}" data-description="{{ image.title }}" href="/img/projects/{{ image.filename }}">
+                <img src="/img/projects/{{ image.filename }}" alt="{{ image.description }}"/>
+              </a>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% for paragraph in paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+        {% if highlights %}
+          <p class="list-header">Highlights</p>
+          <ul>
+            {% for highlight in highlights %}
+              <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}

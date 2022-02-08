@@ -23,7 +23,6 @@
     overflow: hidden;
     border-radius: 0.25rem;
 
-
     &::after {
       position: absolute;
       box-sizing: border-box;
@@ -35,15 +34,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0, 0, 0, 0.6);
       color: white;
-      text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       font-weight: 600;
       text-align: center;
       opacity: 0;
       transform: scale(1.5);
+      font-size: 12px;
 
-      transition: opacity 240ms ease-out, transform 240ms ease-out;
+      transition: opacity 180ms ease-out, transform 180ms ease-out;
     }
 
     &:hover {
@@ -61,11 +61,19 @@
     }
 
     img {
-      object-fit:cover;
+      object-fit: cover;
       width: 100%;
       height: 100%;
     }
   }
+}
+
+@include breakpoint(sm) {
+.project-images {
+  .project-image {
+    &::after {
+      font-size: 1rem;
+    }}}
 }
 
 .reveal-trigger {
@@ -76,6 +84,9 @@
   border: none;
   z-index: 10;
   border-radius: 0.75rem;
+  &:hover {
+    background-color: #edfdf7;
+  }
   h3 {
     display: block;
     margin: 0 0 1rem;
