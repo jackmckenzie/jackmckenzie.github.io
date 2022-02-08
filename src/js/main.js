@@ -1,7 +1,7 @@
 // Project reveal
 const reveals = Array.from(document.querySelectorAll(".reveal"));
-for (var i in reveals){
-    console.log(reveals[i]);
+for (var i in reveals) {
+  console.log(reveals[i]);
 }
 reveals.forEach((el) => {
   const btn = el.querySelector(".reveal-trigger");

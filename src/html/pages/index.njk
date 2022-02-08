@@ -1,113 +1,241 @@
 {% set page_title = 'Work' %}
 {% set body_id = 'work' %}
 
-{% import "partials/heading.njk" as heading %}
-{% import "partials/project.njk" as project %}
+{% from "partials/macro.njk" import heading, project %}
+
+{% block css %}
+  <link rel="stylesheet" href="/css/glightbox.min.css"/>
+{% endblock %}
+
+{% block js %}
+  <script src="/js/glightbox.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    const lightbox = GLightbox({selector: '.glightbox'});
+  </script>
+{% endblock %}
 
 {% extends "layouts/layout.njk" %}
 
 {% block content %}
-  {{ heading.heading('Front-End Developer with design chops 🥋', "Hi, I'm Jack, a hybrid developer/designer who's passionate about inclusive
-        design that solves complex problems.") }}
+  {{ heading(
+    "Front End Developer with design chops 🥋",
+    "Hi, I'm Jack, a hybrid developer/designer who's passionate about inclusive design that solves complex problems."
+  ) }}
   <div class="content">
     <div class="container">
       <div class="row">
         <div class="col-lg-10">
           <h2>My work</h2>
-          {# <p>In my current role I have had the opportunity to work on many challenging projects</p> #}
-          {{ project.project(
-          'rbac',
-            'Roles-based user access control',
-            [
+          {{ project(
+            id='rbac',
+            title='Roles-based user access control',
+            paragraphs=[
               "The purpose of this retail software project was to allow administrative users to create and choose custom roles for users. They are able to create a user, assign them a role and a store and send them an activation email.",
               "I was the designer and front-end developer for this project, working with a product manager and back-end developer. I also wrote some back-end code in Django."
             ],
-            [
+            highlights=[
               "Designed and built a “permissions control” widget using React & Typescript that provides users finer control over a Role's permissions.",
               "Extensively iterated prototypes over several rounds of tests with users",
               "Redesigned and handcoded an activation email that changes its messaging based on data such as user role and store"
             ],
-            ['PD','FE','BE'],
-            ["rbac-1.png", "rbac-2.png"]
+            tags=['PD','FE','BE'],
+            images=[
+              {
+                filename: "rbac-permission-control.png",
+                title: "RBAC Permission Control Widget",
+                description: "This widget allows an admin user to pick permissions for a role. The green dot on the left fills up halfway to show the role has partial access, and fully when they have full access. It tested well with users."
+              },
+              {
+                filename: "rbac-design-file-redlines.png",
+                title: "RBAC Design File (Redlines)"
+              },
+              {
+                filename: "rbac-activation-email.png",
+                title: "RBAC Activation Email",
+                description: "This email shows who invited you and which store they invited you to."
+              }
+            ]
           )}}
-          {{ project.project(
-          'form-components',
-            "Accessible form components",
-            [
-              "Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises designs. The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer."
-            ],
-            [
+          {{ project(
+            id='form-components',
+            title="Accessible form components",
+            paragraphs=[
+              "Over the years I have become more and more passionate about accessibility. I believe adhering to accessibility standards improves rather than compromises design.",
+              "The current software I have been contributing to has many disparate components with poor accessibility used for form elements such as inputs, textareas, buttons etc, and this project was intended to have single TextInput, TextArea components that would handle aria labelling, html labelling with minimum effort from the developer.",
+              "I designed and created the components as we needed them, starting with Text Input, Text Area and a set of buttons."
+            ], 
+            highlights=[
               "Provide an 'id' and the correct labelling and aria descriptions (including hint text and error text) are applied",
               "Implemented a character countdown for the TextArea",
               "Written in Typescript/React with 100% unit test coverage"
             ],
-            ['PD', 'FE']
+            tags=['PD', 'FE'],
+            images=[
+              {
+                filename: "forms-input-errors.png",
+                title: "Accessible form errors"
+              },
+              {
+                filename: "textinput-code.png",
+                title: "Text Input component",
+                description: "Left: Typescript input example. Right: HTML output with accessible aria properties"
+              },
+              {
+                filename: "textarea-character-count.gif",
+                title: "Text Area character countdown",
+                description: "Set characterCount on the component to visually show when a user has exceeded the allowed amount."
+              }
+            ]
           )}}
-          {{ project.project(
-          'runtime-logs',
-            "Runtime Logs",
-            [
-              "Error logs for complex business rule functions."
+          {{ project(
+            id='template-design',
+            title="Template Design",
+            paragraphs=[
+              "Proprietary web-based design software.",
+              "This software is designed to allow users to create their own templates to print their paper promotional tickets.",
+              "It was recognised that our old desktop-based software posed a business risk, as it was too difficult for clients to effectively use.",
+              "I was heavily involved in this project from the outset, collaborating with a senior UX consultant on the initial UI. I then took on the role of sole designer and contributed front end code to the project, tidying up sidebar properties and adding some features."
             ],
-            [
-              "Click a log to view more details in a sidebar, with a link to view the log in detail"
+            highlights=[
+              "We created an entire design app in about 6 months!",
+              "I worked closely with our full-stack developers and was relied upon for questions about how things should work, look and feel",
+              "Designed smart groups: Similar to Flexbox and Figma's auto layout, these allow content to fill up remaining space when other content hasn't been filled in. In our legacy software, this was achieved with complex javascript code.",
+              "Designed complex price fields that allow a user to have fine control over how their dollar and cents symbols should look"
             ],
-            ['PD', 'FE']
+            tags=['PD', 'FE'],
+            images=[
+              {
+                filename: "template-design.png",
+                title: "Template Design Screenshot"
+              },
+              {
+                filename: "smartgroups-1.gif",
+                title: "Smart Groups concepts (GIF)",
+                description: "A concept GIF to explain the purpose of smart groups to internal stakeholders. This shows a complex set of layouts that can be achieved without code."
+              },
+              {
+                filename: "smartgroups-2.gif",
+                title: "Smart Groups concepts (GIF)",
+                description: "A concept GIF to explain the purpose of smart groups to customers. This shows how a smart group works in context of creating a ticket. When fields don't have values, the remaining fields resize to fill the remaining space."
+              }
+            ]
           )}}
-          {{ project.project(
-          'lastyard-blog',
-            "Last Yard Blog",
-            [
+          {{ project(
+            id='mobile-scanner',
+            title="Mobile Scanner",
+            paragraphs=[
+              "The mobile scanner was created to help users in-store to replace missing tickets.
+              Through customer feedback and interviews, we discovered that stores would often need to reprint their tickets outside of their usual print runs. This was typically achieved by writing down lengthy barcode numbers, by hand, to be manually entered into Last Yard.
+              I led the design for this feature with a focus on providing speed and accuracy. We ran multiple sessions including extensive user interviews and prototype testing to learn how we could improve these processes and provide a better ticketing experience.",
+              "Customer feedback has been highly positive."
+            ],
+            highlights=[
+              "A short, 3 month product-driven project with a thorough design process"
+            ],
+            tags=['PD'],
+            images=[
+              {
+                filename: "mobile-scanner-early-prototype.png",
+                title: "Early click-through prototype",
+                description: "We extensively tested with customers. This is an early version shown to customers, whose valuable feedback was implemented in future prototypes and  the final product"
+              },
+              {
+                filename: "mobile-scanner-design-file-1.png",
+                title: "Design File (Scanning Flow)",
+                description: "Part of the design file given to the developer detailing how a user scans a product, and what should occur when it fails"
+              },
+              {
+                filename: "mobile-scanner-design-file-2.png",
+                title: "Design File (Delete Flow)",
+                description: "Part of the design file given to the developer detailing deleting an item, and feedback given to the user"
+              }
+            ]
+          )}}
+          {{ project(
+            id='runtime-logs',
+            title="Runtime Logs",
+            paragraphs=[
+              "Error logs for complex business rule functions.",
+              "This was a challenging project aimed towards power users of the product. They needed high detail and each log needed to be easy to share.",
+              'I created and coded a simple design for this that attempts to "stay out of the way". Users of this tool have found it invaluable in their day to day work.'
+            ],
+            highlights=[
+              "Click a log to view more details in a sidebar, with a link to view the log in detail",
+              "Familiarised myself with Django and calling Django APIs from React"
+            ],
+            tags=['PD', 'FE'],
+            images=[
+              {
+                filename: "runtime-log.png",
+                title: "Runtime Logs example",
+                description: "Example of an opened log. The sidebar allows a user to keep scrolling and easily compare logs."
+              }
+            ]
+          )}}
+          {{ project(
+            id='lastyard-blog',
+            title="Last Yard Blog",
+            paragraphs=[
               "After having our new website built, we wanted to carry over our blog content from the old website.",
               "The quoted price to have it built was out of budget, so I took on the task of developing it in-house. I was able to create the new blog in Storyblok/Typescript in about a week."
             ],
-            [
+            highlights=[
               "Handwritten blog system including authors, dates, etc",
               "Familiarised myself with Storyblok, Vercel, Next and headless CMS"
             ],
-            ['PD', 'FE']
+            tags=['PD', 'FE'],
+            images=[
+              {
+                filename: "blog-list.png", title: "Blog List"
+              },
+              {
+                filename: "blog-post.png", title: "Example of a blog post", description: "I wrote this one!"
+              }
+            ]
           )}}
-          {{ project.project(
-          'dse',
-            "Digital Shelf Edge",
-            [
+          {{ project(
+            id='dse',
+            title="Digital Shelf Edge",
+            paragraphs=[
               "Software for emergent retail systems.",
               "DSE is a custom screen that sits on the shelf, replacing the need to re-ticket the shelf.",
               "I designed and wrote a complex custom React template that takes the store's product data and populates the content on the screen.",
-              "The software allows the user to set custom spacing based on product width and facings, to finetune how the layout should appear.",
-              "The user can also set flags such as Out of stock, on special, on clearance to show engaging promotions and information."
+              "The software allows the user to set custom spacing based on product width and facings, to finetune how the layout should appear, and allows them to choose engaging promotions to show.",
+              "*I'm unable to include pictures due to privacy of the project."
             ],
-            [
+            highlights=[
               "Complex real-time API calling in React",
-              "Customisations including animation"
+              "Bundled with several different layouts based on information the user wants to show",
+              "Customisations including animation and different promotions",
+              "The stores that used this product were very impressed"
             ],
-            ['FE']
+            tags=['FE']
           )}}
-          {{ project.project(
-          'digital-screens',
-            "Digital in-store advertising screens",
-            [
-              "I wrote the templates used to display content on these screens, with functions such as carousel, grid layouts, customisable timing, etc."
+          {{ project(
+            id='digital-screens',
+            title="Digital in-store advertising screens",
+            paragraphs=[
+              "I wrote the templates used to display content on these screens, with functions such as carousel, grid layouts, customisable timing, etc.",
+              "Chances are, you've seen our software in a local IGA!"
             ],
-            [
+            highlights=[
               "Written from scratch in HTML/SCSS/JS using Gulp to build",
               "Complex real-time API calling in React",
               "Customisations including animation"
             ],
-            ['FE']
-          )}}
-          {{ project.project(
-          'mobile-scanner',
-            "Mobile Scanner",
-            [
-              "The mobile scanner was created to help users in-store to replace missing tickets.
-              Through customer feedback and interviews, we discovered that stores would often need to reprint their tickets outside of their usual print runs. This was typically achieved by writing down lengthy barcode numbers, by hand, to be manually entered into Last Yard.
-              I led the design for this feature with a focus on providing speed and accuracy. We ran multiple sessions including extensive user interviews and prototype testing to learn how we could improve these processes and provide a better ticketing experience."
-            ],
-            [
-              "Short project, about 3 months. Feedback from customers has been highly positive."
-            ],
-            ['PD']
+            tags=['FE'],
+            images=[
+              {
+                filename: 'liquor-board.png',
+                title: "Digital Liquor Board",
+                description: "The six items you see onscreen are each separate templates, put in place by the templates I created."
+              },
+              {
+                filename: 'digital-animation.gif',
+                title: "Digital animation",
+                description: "An example of a really simple but effective animation I created for the template."
+              }
+            ]
           )}}
         </div>
       </div>
