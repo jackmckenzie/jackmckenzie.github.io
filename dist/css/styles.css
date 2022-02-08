@@ -417,16 +417,6 @@ body {
   padding-bottom: 5rem;
 }
 
-li {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  padding-left: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-li:last-child {
-  margin-bottom: 0;
-}
-
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -871,13 +861,23 @@ h3 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.75rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 p.list-header {
   font-weight: 600;
   margin-bottom: 0.5rem;
+}
+
+li {
+  font-size: 1rem;
+  line-height: 1.75rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+li:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 576px) {
@@ -900,6 +900,22 @@ p.list-header {
   h3 {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  li {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  li:last-child {
+    margin-bottom: 0;
   }
 }
 a {
@@ -936,10 +952,7 @@ header {
   gap: 1.5rem;
 }
 .nav-item {
-  margin-bottom: 0;
-}
-.nav-item:last-child {
-  margin-right: 0;
+  margin: 0;
 }
 .nav-item a {
   display: inline-block;

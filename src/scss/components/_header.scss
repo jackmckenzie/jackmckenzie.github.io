@@ -23,10 +23,7 @@ header {
     gap: 1.5rem;
   }
   &-item {
-    margin-bottom: 0;
-    &:last-child {
-      margin-right: 0;
-    }
+    margin: 0;
 
     a {
       display: inline-block;
