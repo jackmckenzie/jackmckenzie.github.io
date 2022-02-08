@@ -856,9 +856,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 2.5rem;
   margin-bottom: 2rem;
+}
+h2:not(:first-child) {
+  margin-top: 2.5rem;
 }
 
 h3 {
@@ -886,9 +889,12 @@ p.list-header {
   }
 
   h2 {
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: 2rem;
+  }
+  h2:not(:first-child) {
+    margin-top: 4rem;
   }
 
   h3 {
