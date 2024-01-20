@@ -942,6 +942,7 @@ header {
   font-size: 1.125rem;
   line-height: 2rem;
   flex-direction: column;
+  font-weight: 600;
 }
 
 .nav-list {
@@ -953,6 +954,7 @@ header {
 }
 .nav-item {
   margin: 0;
+  padding: 0;
 }
 .nav-item a {
   display: inline-block;
